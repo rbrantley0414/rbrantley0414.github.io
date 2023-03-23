@@ -12,12 +12,12 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="stylesheet" href="style.css">
-    <title>Rebecca Brantley</title>
+    <title>Projects | Rebecca Brantley</title>
     <link rel="icon" type="image/x-icon" href="media/brantley_favicon.png">
 </head>
 
 <body>
-    <section class="hero">
+    <section>
         <div class="navbar">
             <a href="index.html"><img src="media/brantley_logo.png" alt="brantley logo" height="100px"
                     width="100px"></a>
@@ -37,23 +37,40 @@
             <p class="navLinks close"><a href="projects.html">Projects</a></p>
             <p class="navLinks close"><a href="contact.html">Contact</a></p>
         </div>
-
-
-        <h1>👋 Hi, I'm Rebecca</h1>
-        <p>I am a<span id="text"><span id="cursor"></span>
-            </span>
-        </p>
-        <hr>
-        <!-- <p class="subtitle">Creative and detail-oriented aspiring web development specialist and current student at Joliet Junior College studying Web Development Education. Experienced and knowledgeable in collaborated in cross-functional teams, inventory, and creating international relationship with overseas distributers. </p> -->
     </section>
+    <section class="main">
+        <h1>Projects</h1>
+        <div class="project-gallery">
+            <!-- Trigger the Modal -->
+            <ul class="grid">
+                <li><img id="creative" src="media/creativebeautysupply.JPG" data-modal-src="#"
+                        alt="Creative Beauty Supply Website"></li>
+                <li><img id="rockpaperscissors" src="media/rockpaperscissors.JPG" data-modal-src="#"
+                        alt="Rock Paper Scissors Game"></li>
+                <li><img id="magic8ball" src="media/magic8ball.JPG" data-modal-src="#" alt="Magic 8 Ball Game"></li>
+                <li><img id="aerialarts" src="media/aerialarts.JPG" data-modal-src="#" alt="Aerial Arts - Hobby Page">
+                </li>
 
-    <section class="content">
-
+            </ul>
+            <!-- The Modal -->
+            <div class="modal">
+                <div class="popup-box">
+                    <div class="modal-header">
+                        <span class="closeBtn">&times;</span> <span><a class="ex-link" href="#" target="_blank"><i
+                                    class="uil uil-external-link-alt"></i></a></span>
+                    </div>
+                    <!-- Modal Content (The Image) -->
+                    <img class="modal-content">
+                    <!-- Modal Caption (Image Text) -->
+                    <div class="caption"></div>
+                </div>
+            </div>
+        </div>
     </section>
     <footer class="footer-content">
         <ul>
             <li>
-                <a href="#">About</a>
+                <a href="about.html">About</a>
             </li>
             <li>
                 <a href="resume.html">Resume</a>
@@ -62,7 +79,7 @@
                 <a href="projects.html">Projects</a>
             </li>
             <li>
-                <a href="#">Contact</a>
+                <a href="contact.html">Contact</a>
             </li>
         </ul>
 
@@ -74,7 +91,7 @@
 
         <p>&copy; Rebecca Brantley 2023</p>
     </footer>
-    <script src="app.js"></script>
+    <script src="projects.js"></script>
 </body>
 
 </html>
