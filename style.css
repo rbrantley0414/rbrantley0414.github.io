@@ -308,6 +308,112 @@ a:active {
     text-decoration: none;
 }
 
+.hamburger {
+    height: 50px;
+    width: 50px;
+    display: none;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    margin: 16px;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    background-color: black;
+    height: 4px;
+    width: 36px;
+    margin: 3px;
+    border-radius: 15px;
+}
+
+.mobileNav {
+    width: 80px;
+    background-color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+    top: 66px;
+    right: -160px;
+    margin: 0;
+    padding: 16px;
+    transition: transform 0.5s;
+}
+
+.mobileNav img {
+    width: 24px;
+    height: 24px;
+}
+
+.openDrawer {
+    transform: translateX(-160px);
+}
+
+.mobileNav a {
+    text-decoration: none;
+    color: black;
+    margin: 16px 0;
+}
+
+.mobileNav a:hover {
+    text-decoration: underline;
+}
+
+.animateBar1 {
+    animation: flipBar1 0.7s;
+    animation-fill-mode: forwards;
+}
+
+.animateBar2 {
+    animation: fadeBar2 0.7s;
+    animation-fill-mode: forwards;
+}
+
+.animateBar3 {
+    animation: flipBar3 0.7s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes flipBar1 {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(45deg) translate(4px, 10px);
+    }
+
+}
+
+@keyframes fadeBar2 {
+    from {
+        transform: scaleX(1);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+}
+
+@keyframes flipBar3 {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(-45deg) translate(4px, -10px);
+    }
+
+}
+
 h1 {
     font-family: Bitter, serif;
     font-weight: 500;
@@ -371,7 +477,7 @@ h1 {
 }
 
 .content-pages {
-    height: 125px;
+    height: auto;
 }
 
 .content-pages h1 {
@@ -463,6 +569,14 @@ footer p {
     background: #fc79a9;
 }
 
+/* About */
+
+.frontend-skills img,
+.other-skills img {
+    height: 50px;
+    width: 50px;
+}
+
 /* Resume */
 
 .resume {
@@ -508,7 +622,7 @@ footer p {
         "aerialarts aerialarts aerialarts";
     grid-gap: 16px;
     width: 50%;
-    height: 250px;
+    height: auto;
 }
 
 #creative {
@@ -589,4 +703,83 @@ i.uil.uil-external-link-alt {
     border-radius: 0 0 15px 15px;
     text-align: center;
     padding: 1em;
+}
+
+@media only screen and (max-width: 875px) {
+
+    /* Home */
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .hero p {
+        font-size: 40px;
+    }
+
+    /* Projects */
+    .grid {
+        display: grid;
+        grid-template-areas:
+            "creative rockpaperscissors"
+            "magic8ball aerialarts";
+        grid-gap: 16px;
+        width: 50%;
+        height: 250px;
+    }
+}
+
+@media only screen and (max-width: 646px) {
+
+    /* Home */
+    .hero span.wave {
+        display: none;
+    }
+
+    .hero p {
+        font-size: 20px;
+    }
+
+    /* Projects */
+
+    .project-gallery {
+        height: 650px;
+        margin: auto;
+        display: block;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-areas:
+            "creative"
+            "rockpaperscissors"
+            "magic8ball"
+            "aerialarts";
+        grid-gap: 16px;
+        width: 50%;
+        height: 250px;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+
+    /* Nav */
+    .logo {
+        height: 50px;
+        width: 50px;
+    }
+
+    .circle {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hamburger:hover {
+        cursor: pointer;
+    }
 }
