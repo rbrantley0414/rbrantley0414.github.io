@@ -577,6 +577,147 @@ footer p {
     width: 50px;
 }
 
+.frontend-skills img:hover,
+.other-skills img:hover {
+    scale: 1.2;
+    opacity: 0.8;
+}
+
+.html5:hover{
+    filter: invert(72%) sepia(82%) saturate(5828%) hue-rotate(348deg) brightness(100%) contrast(89%);
+}
+.css3:hover{
+    filter: invert(35%) sepia(32%) saturate(7490%) hue-rotate(215deg) brightness(96%) contrast(96%);
+}
+
+.javascript:hover{
+    filter: invert(92%) sepia(78%) saturate(4921%) hue-rotate(321deg) brightness(113%) contrast(88%);
+}
+
+.node:hover{
+    filter: invert(42%) sepia(64%) saturate(436%) hue-rotate(70deg) brightness(91%) contrast(89%);
+}
+
+.git:hover{
+    filter: invert(38%) sepia(87%) saturate(2810%) hue-rotate(347deg) brightness(99%) contrast(92%);
+}
+
+/* .github:hover{
+    filter: invert(55%) sepia(1%) saturate(1172%) hue-rotate(52deg) brightness(88%) contrast(89%);
+}
+
+.figma:hover{
+    filter: invert(55%) sepia(1%) saturate(1172%) hue-rotate(52deg) brightness(88%) contrast(89%);
+} */
+
+.windows:hover{
+    filter: invert(52%) sepia(88%) saturate(2923%) hue-rotate(167deg) brightness(96%) contrast(102%);
+}
+
+[data-tooltip],
+.tooltip {
+  position: relative;
+  cursor: pointer;
+}
+
+/* Base styles for the entire tooltip */
+[data-tooltip]:before,
+[data-tooltip]:after,
+.tooltip:before,
+.tooltip:after {
+  position: absolute;
+  visibility: hidden;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition: 
+	  opacity 0.2s ease-in-out,
+		visibility 0.2s ease-in-out,
+		-webkit-transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+	-moz-transition:    
+		opacity 0.2s ease-in-out,
+		visibility 0.2s ease-in-out,
+		-moz-transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+	transition:         
+		opacity 0.2s ease-in-out,
+		visibility 0.2s ease-in-out,
+		transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform:    translate3d(0, 0, 0);
+  transform:         translate3d(0, 0, 0);
+  pointer-events: none;
+}
+
+/* Show the entire tooltip on hover and focus */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after,
+[data-tooltip]:focus:before,
+[data-tooltip]:focus:after,
+.tooltip:hover:before,
+.tooltip:hover:after,
+.tooltip:focus:before,
+.tooltip:focus:after {
+  visibility: visible;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+/* Base styles for the tooltip's directional arrow */
+.tooltip:before,
+[data-tooltip]:before {
+  z-index: 1001;
+  border: 6px solid transparent;
+  background: transparent;
+  content: "";
+}
+
+/* Base styles for the tooltip's content area */
+.tooltip:after,
+[data-tooltip]:after {
+  z-index: 1000;
+  padding: 8px;
+  width: auto;
+  border-radius: 5px;
+  background-color: #000;
+  background-color: hsla(0, 0%, 20%, 0.9);
+  color: #fff;
+  content: attr(data-tooltip);
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+/* Horizontally align top/bottom tooltips */
+[data-tooltip]:after,
+.tooltip:after{
+  margin-left: -10px;
+}
+
+/* Bottom */
+.tooltip-bottom:before,
+.tooltip-bottom:after {
+  top: 100%;
+  bottom: auto;
+  left: 50%;
+}
+
+.tooltip-bottom:before {
+  margin-top: -12px;
+  margin-bottom: 0;
+  border-top-color: transparent;
+  border-bottom-color: #000;
+  border-bottom-color: hsla(0, 0%, 20%, 0.9);
+}
+
+.tooltip-bottom:hover:before,
+.tooltip-bottom:hover:after,
+.tooltip-bottom:focus:before,
+.tooltip-bottom:focus:after {
+  -webkit-transform: translateY(12px);
+  -moz-transform:    translateY(12px);
+  transform:         translateY(12px); 
+}
+
 /* Resume */
 
 .resume {
