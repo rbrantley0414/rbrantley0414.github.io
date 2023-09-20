@@ -6,6 +6,7 @@ body {
     letter-spacing: 0.5px;
     background-color: #4b4b4b;
     color: #fff;
+    width: 99vw;
 }
 
 /* Header/NavBar */
@@ -500,6 +501,7 @@ h1 {
 
 .hero {
     height: 100vh;
+    /* width: 99vw; */
     color: white;
     text-align: center;
     display: flex;
