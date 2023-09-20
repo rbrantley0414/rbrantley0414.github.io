@@ -61,3 +61,13 @@ gallery.addEventListener('click', function (event) {
 closeBtn.addEventListener('click', function (event) {
   modal.removeAttribute('style')
 })
+// Toggle dark mode on and off
+function toggleDarkMode(){
+  const darkModeSwitch = document.getElementById("dark-mode") ;
+  if (darkModeSwitch.checked == false){
+      document.getElementById("theme").href = "style-dark.css";
+    }else{
+      document.getElementById("theme").href = "style.css";
+    }
+}
+
