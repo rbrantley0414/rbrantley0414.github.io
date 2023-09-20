@@ -107,3 +107,27 @@ function Delete() {
 
 // Start the typing effect on load
 _INTERVAL_VAL = setInterval(Type, 100);
+
+// Toggle dark mode on and off
+function toggleDarkMode(){
+    const darkModeSwitch = document.getElementById("dark-mode");
+    if (darkModeSwitch.checked == true){
+        document.getElementById("theme").href = "style-dark.css";
+        localStorage.setItem('isDarkMode', true);
+      }else{
+        document.getElementById("theme").href = "style.css";
+        localStorage.setItem('isDarkMode', false);
+      }
+  }
+
+// Check dark mode setting from last session
+function checkPreferences(){
+      if (localStorage.getItem('isDarkMode') === 'true') {
+        document.getElementById("theme").href = "style-dark.css";
+        document.getElementById("dark-mode").checked = true;
+        }else{
+            document.getElementById("theme").href = "style.css";
+          }
+}
+
+  
