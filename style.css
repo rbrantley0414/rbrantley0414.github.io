@@ -648,6 +648,7 @@ footer p {
 .other-skills img {
     height: 50px;
     width: 50px;
+    margin: .25em;
 }
 
 .frontend-skills img:hover,
@@ -669,6 +670,14 @@ footer p {
 
 .node:hover{
     filter: invert(42%) sepia(64%) saturate(436%) hue-rotate(70deg) brightness(91%) contrast(89%);
+}
+
+.bootstrap:hover{
+    filter: invert(27%) sepia(15%) saturate(2572%) hue-rotate(225deg) brightness(101%) contrast(89%);
+}
+
+.php:hover{
+    filter: invert(35%) sepia(30%) saturate(808%) hue-rotate(192deg) brightness(94%) contrast(90%);
 }
 
 .git:hover{
@@ -801,6 +810,10 @@ footer p {
 
 .resume a:link {
     color: black;
+}
+
+.align-right{
+    float: right;
 }
 
 /* Projects Gallery */
