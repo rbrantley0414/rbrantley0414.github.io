@@ -672,12 +672,16 @@ footer p {
     filter: invert(42%) sepia(64%) saturate(436%) hue-rotate(70deg) brightness(91%) contrast(89%);
 }
 
+.php:hover{
+    filter: invert(35%) sepia(30%) saturate(808%) hue-rotate(192deg) brightness(94%) contrast(90%);
+}
+
 .bootstrap:hover{
     filter: invert(27%) sepia(15%) saturate(2572%) hue-rotate(225deg) brightness(101%) contrast(89%);
 }
 
-.php:hover{
-    filter: invert(35%) sepia(30%) saturate(808%) hue-rotate(192deg) brightness(94%) contrast(90%);
+.python:hover{
+    content: url("media/python-color.svg");
 }
 
 .git:hover{
@@ -687,10 +691,15 @@ footer p {
 /* .github:hover{
     filter: invert(55%) sepia(1%) saturate(1172%) hue-rotate(52deg) brightness(88%) contrast(89%);
 }
+ */
 
 .figma:hover{
-    filter: invert(55%) sepia(1%) saturate(1172%) hue-rotate(52deg) brightness(88%) contrast(89%);
-} */
+    content: url("media/figma-color.svg");
+}
+
+.adobe:hover{
+    content: url("media/adobe-color.svg");
+}
 
 .windows:hover{
     filter: invert(52%) sepia(88%) saturate(2923%) hue-rotate(167deg) brightness(96%) contrast(102%);
