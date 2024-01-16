@@ -1,9 +1,13 @@
 body {
-    font-family: Mukta, sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 16px;
     margin: 0;
     padding: 0;
     letter-spacing: 0.5px;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'DM Serif Display', serif;
 }
 
 /* Header/NavBar */
@@ -62,7 +66,7 @@ label{
     width: 16px;
     left: 4px;
     bottom: 4px;
-    background-color: rgb(245, 231, 35);
+    background-color: rgb(243, 215, 137);
     -webkit-transition: .4s;
     transition: .4s;
   }
@@ -100,7 +104,7 @@ label{
     z-index: 3;
     height: 200px;
     width: 200px;
-    background-color: #ffafcc;
+    background-color: #565656;
     border-radius: 50%;
     top: 0px;
     right: 0px;
@@ -113,7 +117,7 @@ label{
     z-index: 1;
     height: 50px;
     width: 50px;
-    background-color: #ffafcc;
+    background-color: #565656;
     border-radius: 50%;
     top: 50px;
     right: 50px;
@@ -127,7 +131,7 @@ label{
     z-index: 1;
     height: 50px;
     width: 50px;
-    background-color: #ffafcc;
+    background-color: #565656;
     border-radius: 50%;
     top: 50px;
     right: 50px;
@@ -374,7 +378,7 @@ a:visited {
 
 a:hover {
     text-decoration: none;
-    color: #f773a3;
+    color: #444444;
 }
 
 a:active {
@@ -488,16 +492,19 @@ a:active {
 }
 
 h1 {
-    font-family: Bitter, serif;
     font-weight: 500;
-    font-size: 80px;
+    font-size: 5em !important;
     font-weight: 400;
     letter-spacing: -1.5px;
     margin: 0;
 }
 
+h2{
+    font-size: 2em !important;
+}
+
 .hero {
-    background-color: #fddbeb;
+    background-color: #eeeeee;
     height: 100vh;
     color: black;
     text-align: center;
@@ -505,6 +512,10 @@ h1 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.hero h1 {
+    font-size: 6em;
 }
 
 .hero h1,
@@ -515,7 +526,6 @@ h1 {
 }
 
 .hero p {
-    font-family: Bitter, serif;
     font-size: 50px;
 }
 
@@ -524,8 +534,8 @@ h1 {
     margin: 32px 0;
 }
 
-.hero p .subtitle {
-    font-size: 24px;
+.gray{
+    color: #565656;
 }
 
 #cursor {
@@ -554,7 +564,7 @@ h1 {
 }
 
 .content-pages h1 {
-    font-size: 3em;
+    font-size: 6em !important;
     height: 100px;
     display: flex;
     padding: 16px;
@@ -568,83 +578,50 @@ h1 {
     padding: 32px;
 }
 
-/* Footer */
-
-footer {
-    background-color: #ffafcc;
-    margin-top: auto;
-}
-
-footer ul {
-    list-style: none;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 900px;
-    text-align: center;
-    padding: 15px 0;
-}
-
-footer ul li {
-    display: inline;
-    padding: 0 16px;
-}
-
-footer a:link {
-    text-decoration: none;
-    color: black;
-}
-
-footer a:visited {
-    text-decoration: none;
-    color: black;
-}
-
-
-footer li a:hover {
-    border-bottom: 2px solid white;
-    color: white;
-}
-
-.footer-content {
-    text-align: center;
-}
-
-footer i {
-    color: black;
-    font-size: 1.5rem;
-    margin: 0 8px;
-}
-
-footer i:hover {
-    color: white;
-}
-
-footer p {
-    color: black;
-    margin: 0;
-    padding: 8px 8px;
-}
-
-::-webkit-scrollbar {
-    width: 15px;
-}
-
-::-webkit-scrollbar-track {
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #ffafcc;
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #fc79a9;
-}
-
 /* About */
+#about{
+    background-color: #212529;
+    color: white;
+    height: 100vh;
+}
+
+.wrap{
+    float: right;
+    margin: 5px;
+}
+
+.profile_pic{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+}
+
+li.certs {
+    list-style: none;
+    font-size: 1.5em;
+    display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+  li.certs::before {
+    content: '';
+    display: inline-block;
+    height: 70px;
+    width: 70px;
+    background-image: url('media/award-solid.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: .25em;
+  }
+
+  .skills-content{
+    margin-left: 2em;
+  }
+  
 
 .frontend-skills img,
+.graphic-skills img,
 .other-skills img {
     height: 50px;
     width: 50px;
@@ -652,6 +629,7 @@ footer p {
 }
 
 .frontend-skills img:hover,
+.graphic-skills img:hover,
 .other-skills img:hover {
     scale: 1.2;
     opacity: 0.8;
@@ -688,21 +666,32 @@ footer p {
     filter: invert(38%) sepia(87%) saturate(2810%) hue-rotate(347deg) brightness(99%) contrast(92%);
 }
 
-/* .github:hover{
-    filter: invert(55%) sepia(1%) saturate(1172%) hue-rotate(52deg) brightness(88%) contrast(89%);
-}
- */
-
 .figma:hover{
     content: url("media/figma-color.svg");
 }
 
-.adobe:hover{
-    content: url("media/adobe-color.svg");
+.adobe-ps:hover{
+    filter: invert(11%) sepia(61%) saturate(3573%) hue-rotate(234deg) brightness(100%) contrast(145%);
+}
+
+.adobe-ai:hover{
+    filter: invert(50%) sepia(18%) saturate(5771%) hue-rotate(353deg) brightness(93%) contrast(85%);
+}
+
+.adobe-id:hover{
+    filter: invert(8%) sepia(67%) saturate(4725%) hue-rotate(324deg) brightness(67%) contrast(103%);
+}
+
+.canva:hover{
+    filter: invert(54%) sepia(92%) saturate(349%) hue-rotate(136deg) brightness(96%) contrast(99%);
 }
 
 .windows:hover{
     filter: invert(52%) sepia(88%) saturate(2923%) hue-rotate(167deg) brightness(96%) contrast(102%);
+}
+
+.office:hover{
+    filter: invert(43%) sepia(21%) saturate(3279%) hue-rotate(354deg) brightness(88%) contrast(93%);
 }
 
 [data-tooltip],
@@ -828,10 +817,10 @@ footer p {
 /* Projects Gallery */
 
 .project-gallery {
-    background-color: #fddbeb;
+    background-color: #eeeeee;
     display: flex;
     align-items: center;
-    padding: 50px 0px 200px 50px;
+    padding: 50px;
     height: 100%;
     border-radius: 15px;
 }
@@ -854,11 +843,15 @@ footer p {
 .grid {
     display: grid;
     grid-template-areas:
-        "creative rockpaperscissors magic8ball"
-        "aerialarts aerialarts aerialarts";
+        "piggy creative rockpaperscissors"
+        "magic8ball aerialarts aerialarts";
     grid-gap: 16px;
     width: 50%;
     height: auto;
+}
+
+#piggy {
+    grid-area: piggy;
 }
 
 #creative {
@@ -941,6 +934,80 @@ i.uil.uil-external-link-alt {
     padding: 1em;
 }
 
+/* Footer */
+
+footer {
+    background-color: #212529;
+    margin-top: auto;
+}
+
+footer ul {
+    list-style: none;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+    padding: 15px 0;
+}
+
+footer ul li {
+    display: inline;
+    padding: 0 16px;
+}
+
+footer a:link {
+    text-decoration: none;
+    color: white;
+}
+
+footer a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+
+footer li a:hover {
+    border-bottom: 2px solid #ccc;
+    color: #ccc;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+footer i {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 8px;
+}
+
+footer i:hover {
+    color: #ccc;
+}
+
+footer p {
+    color: white;
+    margin: 0;
+    padding: 8px 8px;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cccccc;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #bbbbbb;
+}
+
 @media only screen and (max-width: 875px) {
 
     /* Home */
@@ -1018,4 +1085,8 @@ i.uil.uil-external-link-alt {
     .hamburger:hover {
         cursor: pointer;
     }
+}
+
+.graphicDesign{
+    width: 100%;
 }
