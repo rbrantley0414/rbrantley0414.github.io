@@ -130,4 +130,31 @@ function checkPreferences(){
           }
 }
 
+//Image gallery popup
+
+var gallery = document.querySelector(".project-gallery")
+var modal = document.querySelector(".modal");
+var closeBtn = document.querySelector(".closeBtn");
+var exLink = document.querySelector(".exLink");
+
+gallery.addEventListener('click', function (event) {
+  // the event.target could be the `li` or the `img`, but we only want the `img`
+  var image = event.target.closest('li').querySelector('img')
+  var dataSrc = event.target.getAttribute('data-modal-src');
+  // console.log(image);
+  // console.log(dataSrc);
+
+  modal.setAttribute('style', 'display: block;')
+  modal.querySelector('.modal-content').setAttribute('src', image.getAttribute('src'))
+  //set alt text to caption
+  var alt = image.getAttribute('alt');
+  // console.log(alt);
+  document.querySelector('.caption').innerHTML = alt;
+  document.querySelector('.ex-link').href = dataSrc;
+})
+
+closeBtn.addEventListener('click', function (event) {
+  modal.removeAttribute('style')
+})
+
   
