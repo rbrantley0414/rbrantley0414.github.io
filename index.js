@@ -112,7 +112,7 @@ _INTERVAL_VAL = setInterval(Type, 100);
 function toggleDarkMode(){
     const darkModeSwitch = document.getElementById("dark-mode");
     if (darkModeSwitch.checked == true){
-        document.getElementById("theme").href = "style-dark.css";
+        document.getElementById("theme").href = "style-dark-v2.css";
         localStorage.setItem('isDarkMode', true);
       }else{
         document.getElementById("theme").href = "style.css";
@@ -123,7 +123,7 @@ function toggleDarkMode(){
 // Check dark mode setting from last session
 function checkPreferences(){
       if (localStorage.getItem('isDarkMode') === 'true') {
-        document.getElementById("theme").href = "style-dark.css";
+        document.getElementById("theme").href = "style-dark-v2.css";
         document.getElementById("dark-mode").checked = true;
         }else{
             document.getElementById("theme").href = "style.css";
