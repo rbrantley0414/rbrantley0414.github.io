@@ -35,19 +35,27 @@ hamburger.addEventListener("click", () => {
   mobileNav.classList.toggle("openDrawer");
 })
 
+function toggleDarkMode(){
+  const darkModeSwitch = document.getElementById("dark-mode") ;
+  if (darkModeSwitch.checked == false){
+      document.getElementById("theme").href = "style-dark-v2.css";
+    }else{
+      document.getElementById("theme").href = "style.css";
+    }
+}
+
 //Image gallery popup
 
-var gallery = document.querySelector(".project-gallery")
+var gallery = document.getElementById("project-gallery")
 var modal = document.querySelector(".modal");
 var closeBtn = document.querySelector(".closeBtn");
-var exLink = document.querySelector(".exLink");
+// var exLink = document.querySelector(".exLink");
 
 gallery.addEventListener('click', function (event) {
-  // the event.target could be the `li` or the `img`, but we only want the `img`
-  var image = event.target.closest('li').querySelector('img')
-  var dataSrc = event.target.getAttribute('data-modal-src');
-  // console.log(image);
-  // console.log(dataSrc);
+  var image = event.target.querySelector('img')
+  // var imgSrc = event.target.getAttribute('data-modal-src');
+  console.log(image.getAttribute('src'));
+  // console.log(imgSrc);
 
   modal.setAttribute('style', 'display: block;')
   modal.querySelector('.modal-content').setAttribute('src', image.getAttribute('src'))
@@ -55,19 +63,11 @@ gallery.addEventListener('click', function (event) {
   var alt = image.getAttribute('alt');
   // console.log(alt);
   document.querySelector('.caption').innerHTML = alt;
-  document.querySelector('.ex-link').href = dataSrc;
+  // document.querySelector('.ex-link').href = dataSrc;
 })
 
 closeBtn.addEventListener('click', function (event) {
-  modal.removeAttribute('style')
+  modal.removeAttribute('style', 'display: block;')
 })
-// Toggle dark mode on and off
-function toggleDarkMode(){
-  const darkModeSwitch = document.getElementById("dark-mode") ;
-  if (darkModeSwitch.checked == false){
-      document.getElementById("theme").href = "style-dark.css";
-    }else{
-      document.getElementById("theme").href = "style.css";
-    }
-}
+
 
