@@ -46,28 +46,23 @@ function toggleDarkMode(){
 
 //Image gallery popup
 
-var gallery = document.getElementById("project-gallery")
-var modal = document.querySelector(".modal");
-var closeBtn = document.querySelector(".closeBtn");
-// var exLink = document.querySelector(".exLink");
+var modalEle = document.querySelector(".modal");
+var modalCaption = document.querySelector(".caption");
+var modalImage = document.querySelector(".modalImage");
+var galleryImages = document.querySelectorAll(".ImgThumbnail");
 
-gallery.addEventListener('click', function (event) {
-  var image = event.target.querySelector('img')
-  // var imgSrc = event.target.getAttribute('data-modal-src');
-  console.log(image.getAttribute('src'));
-  // console.log(imgSrc);
 
-  modal.setAttribute('style', 'display: block;')
-  modal.querySelector('.modal-content').setAttribute('src', image.getAttribute('src'))
-  //set alt text to caption
-  var alt = image.getAttribute('alt');
-  // console.log(alt);
-  document.querySelector('.caption').innerHTML = alt;
-  // document.querySelector('.ex-link').href = dataSrc;
-})
+Array.from(document.querySelectorAll(".ImgThumbnail")).forEach(item => {
+   item.addEventListener("click", event => {
+      modalEle.style.display = "block";
+      modalImage.src = event.target.src;
+      console.log(event.target.slideIndex);
+      modalCaption.innerHTML = event.target.alt;
+   });
 
-closeBtn.addEventListener('click', function (event) {
-  modal.removeAttribute('style', 'display: block;')
-})
+});
 
+document.querySelector(".closeModal").addEventListener("click", () => {
+  modalEle.style.display = "none";
+});
 

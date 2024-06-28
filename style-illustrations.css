@@ -9,10 +9,6 @@ body {
     flex-direction: column;
 }
 
-/* h1,h2,h3,h4,h5,h6{
-    font-family: 'DM Serif Display', serif;
-} */
-
 /* Header/NavBar */
 
 .navbar {
@@ -500,7 +496,6 @@ h2{
 }
 
 .hero {
-    /* background-image: url(media/cutesy-wallpaper.png);  */
     background-color: #5e548e;
     background-size: cover;
     height: 85vh;
@@ -512,244 +507,88 @@ h2{
     justify-content: center;
 }
 
-.hero h1 {
-    font-size: 6em;
-}
-
-.hero h1,
-.hero p {
-    width: 75%;
-    max-width: 900px;
-    margin: 16px 0;
-}
-
-.hero p {
-    font-size: 50px;
-}
-
-/* gallery starts */
-
-.project-grid{
-    display: grid;
-    grid-template-areas:
-      "lolla groovy barbie";
-    grid-gap: 16px;
-    width: 100%;
-    max-width: 90%;
-    margin: 50px 30px 20px 130px;
-  }
-  
-  #lolla{
-    grid-area: lolla;
-  }
-
-  #groovy{
-    grid-area: groovy;
-  }
-
-  #barbie{
-    grid-area: barbie;
-  }
-  
-  .project{
-    position: relative;
-  
-  }
-  
-  .project img {
-    width: 100%;
-    object-fit: cover;
-    height: 100%;
-  }
-  
-  .project .overlay{
-    background-color: rgba(255,255,255,0.3);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    font-size: 36px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    opacity: 0;
-    transition: all 0.2s ease;
-  }
-  
-  .project .overlay:hover{
-    opacity: 1;
-    cursor: pointer;
-  }
-  
-  @media only screen and (max-width: 1100px){
-    .project-grid{
-      max-width: 100%;
-      grid-template-areas: 
-        "lolla groovy"
-        "barbie";
-    }
-  }
-  
-  @media only screen and (max-width: 768px){
-    .project-grid{
-      grid-template-areas: 
-      "lolla"
-      "groovy"
-      "barbie";
-    }
-    .project .overlay{
-      font-size: 24px;
-    }
-  }
-
-/* gallery ends */
-
 .content-pages {
     height: 120px;
 }
 
-/* .content-pages h1 {
-    font-size: 6em !important;
-    height: 100px;
-    display: flex;
-    padding: 16px;
-    align-items: center;
-    justify-content: center;
-} */
+/* gallery starts */
 
-.content {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 32px;
-}
-
-.branding-board{
-    width: 1000px;
-}
-
-/* Projects Gallery */
-
-.project-gallery {
-    background-color: #eeeeee;
-    display: flex;
-    align-items: center;
-    padding: 50px;
-    height: 100%;
-    border-radius: 15px;
-}
-
-.project-gallery ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.project-gallery ul li:hover {
+  #wrap{
+    margin-top: 1em;
+    width: 85%;
+  }
+  
+  .ImgThumbnail {
+    border-radius: 5px;
     cursor: pointer;
-    opacity: 0.7;
-}
-
-.project-gallery ul li img {
+    transition: 0.3s;
+    height: 250px;
     width: 250px;
-}
-
-.grid {
-    display: grid;
-    grid-template-areas:
-        "piggy creative rockpaperscissors"
-        "magic8ball aerialarts aerialarts";
-    grid-gap: 16px;
-    width: 50%;
-    height: auto;
-}
-
-#piggy {
-    grid-area: piggy;
-}
-
-#creative {
-    grid-area: creative;
-}
-
-#rockpaperscissors {
-    grid-area: rockpaperscissors;
-}
-
-#magic8ball {
-    grid-area: magic8ball;
-}
-
-#aerialarts {
-    grid-area: aerialarts;
-}
-
-.grid img {
-    border-radius: 10px;
-}
-
-.modal {
+    object-fit: cover;
+  }
+  
+  .ImgThumbnail:hover {
+    opacity: 0.8;
+  }
+  
+  .ImgThumbnail:nth-of-type(1) {
+    margin-left: 20%;
+  }
+  
+  .modal {
     display: none;
     position: fixed;
-    top: 0;
-    bottom: 0;
+    z-index: 1;
+    padding-top: 25px;
     left: 0;
-    right: 0;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.6);
-    transition: all 0.25s ease
-}
-
-.popup-box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    max-width: 500px;
+    top: 0;
     width: 100%;
-    justify-content: center;
-    transform: translate(-50%, -50%);
-    border-radius: 15px;
-    transition: all 0.25s ease
-}
-
-.modal-header {
-    box-sizing: border-box;
-    height: 50px;
-    padding: 2em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    border-radius: 15px 15px 0 0;
-}
-
-.closeBtn {
-    font-size: 28px;
-    cursor: pointer;
-}
-
-i.uil.uil-external-link-alt {
-    color: white;
-}
-
-.modal-content {
-    max-width: 500px;
-}
-
-.caption {
-    box-sizing: border-box;
-    height: 50px;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    margin: 0;
-    border-radius: 0 0 15px 15px;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  .modalImage {
+    margin: auto;
+    display: block;
+    /* width: 50%; */
+    height: 80%;
+    max-width: 700px;
+  }
+  .caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
     text-align: center;
-    padding: 1em;
-}
+    color: #ccc;
+    padding: 10px 0;
+    /* height: 150px; */
+  }
+  .closeModal {
+    position: absolute;
+    top: 2em;
+    right: 5em;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  .closeModal:hover,
+  .closeModal:focus {
+    color: rgb(90, 90, 90);
+    cursor: pointer;
+  }
+  
+  @media only screen and (max-width: 1100px){
+  }
+  
+  @media only screen and (max-width: 768px){
+  }
+
+/* gallery ends */
+
+
 
 /* Footer */
 
@@ -903,25 +742,4 @@ footer p {
     .hamburger:hover {
         cursor: pointer;
     }
-    /* About Me */
-    
-    #about{
-        height: auto;
-    }
-
-    .about h1{
-        font-size: 15px;
-    }
-
-    .about h2{
-        margin-top: 2em;
-    }
-
-    .wrap{
-        float: none;
-    }
 }
-
-/* .graphicDesign{
-    width: 100%;
-} */
