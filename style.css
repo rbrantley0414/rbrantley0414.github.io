@@ -653,29 +653,6 @@ h2{
     cursor: pointer;
   }
   
-  @media only screen and (max-width: 1100px){
-    .project-grid{
-      max-width: 100%;
-      grid-template-areas: 
-        "devil devil"
-        "waffle code"
-        "illustrations uiux";
-    }
-  }
-  
-  @media only screen and (max-width: 768px){
-    .project-grid{
-      grid-template-areas: 
-        "devil devil"
-        "waffle waffle"
-        "code code"
-        "illustrations uiux";
-    }
-    .project .overlay{
-      font-size: 24px;
-    }
-  }
-
 /* gallery ends */
 
 .content-pages {
@@ -1147,6 +1124,19 @@ i.uil.uil-external-link-alt {
     background: #bbbbbb;
 }
 
+@media only screen and (max-width: 1100px){
+    .project-grid{
+      max-width: 100%;
+      grid-template-areas: 
+        "devil devil"
+        "waffle code"
+        "illustrations uiux";
+    }
+  }
+  
+ 
+
+
 @media only screen and (max-width: 875px) {
 
     /* Home */
@@ -1167,7 +1157,27 @@ i.uil.uil-external-link-alt {
     .mobile{
         display: none;
     }
+
+    .branding-board{
+        height: auto;
+        width: 80%;
+    }
 }
+
+@media only screen and (max-width: 768px){
+    .project-grid{
+      grid-template-areas: 
+        "devil"
+        "waffle"
+        "code"
+        "illustrations"
+        "ux";
+    margin: 50px 30px 20px 30px;
+    }
+    .project .overlay{
+      font-size: 24px;
+    }
+  }
 
 @media only screen and (max-width: 646px) {
 
@@ -1207,8 +1217,8 @@ i.uil.uil-external-link-alt {
 
     /* Nav */
     .logo {
-        height: 50px;
-        width: 50px;
+        height: 15px;
+        width:15px;
     }
 
     .circle {
