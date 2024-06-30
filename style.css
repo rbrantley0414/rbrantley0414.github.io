@@ -689,9 +689,6 @@ h2{
 }
 
 /* About */
-/* #about{
-    height: 100vh;
-} */
 
 .wrap{
     float: right;
@@ -713,7 +710,7 @@ h2{
 
 li.certs {
     list-style: none;
-    font-size: 1.5em;
+    font-size: 18px;
     display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -1070,7 +1067,7 @@ i.uil.uil-external-link-alt {
     color: #5e548e;
 }
 
-/* Footer */
+/* Footer Start*/
 
 .footer {
     display:block;
@@ -1131,6 +1128,8 @@ i.uil.uil-external-link-alt {
     padding: 8px 8px;
 }
 
+/* Footer End */
+
 ::-webkit-scrollbar {
     width: 15px;
 }
@@ -1158,9 +1157,23 @@ i.uil.uil-external-link-alt {
     .hero p {
         font-size: 40px;
     }
+
+    /* About */
+
+    .web{
+        display: block;
+    }
+
+    .mobile{
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 646px) {
+
+    .switch {
+        display: inline-block;
+    }
 
     /* Home */
     .hero span.wave {
@@ -1169,6 +1182,16 @@ i.uil.uil-external-link-alt {
 
     .hero p {
         font-size: 20px;
+    }
+
+    /* About */
+
+    .web{
+        display: none;
+    }
+
+    .mobile{
+        display: block;
     }
 
     /* Projects */
@@ -1202,7 +1225,13 @@ i.uil.uil-external-link-alt {
     .hamburger:hover {
         cursor: pointer;
     }
+
+    .switch {
+        display: none;
+    }
+
     /* About Me */
+
     
     #about{
         height: auto;
@@ -1218,5 +1247,9 @@ i.uil.uil-external-link-alt {
 
     .wrap{
         float: none;
+    }
+    
+    .certs{
+        font-size: 8px;
     }
 }

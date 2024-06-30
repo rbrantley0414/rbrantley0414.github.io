@@ -511,11 +511,18 @@ h2{
     height: 120px;
 }
 
+.content {
+    max-width: 80%;
+    margin: 0 auto;
+    /* padding: 32px; */
+}
+
 /* gallery starts */
 
   #wrap{
     margin-top: 1em;
     width: 85%;
+    margin: auto;
   }
   
   .ImgThumbnail {
@@ -533,6 +540,41 @@ h2{
   
   .ImgThumbnail:nth-of-type(1) {
     margin-left: 20%;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
   }
   
   .modal {
@@ -592,13 +634,16 @@ h2{
 
 /* Footer */
 
-footer {
-    background-color: #5e548e;
-    bottom: 0;
+.footer {
+    display:block;
+    position: relative;
     margin-top: auto;
+    bottom: 0;
+    width: 100%;
+    background-color: #5e548e;
 }
 
-footer ul {
+.footer ul {
     list-style: none;
     margin: 0 auto;
     width: 100%;
@@ -607,23 +652,23 @@ footer ul {
     padding: 15px 0;
 }
 
-footer ul li {
+.footer ul li {
     display: inline;
     padding: 0 16px;
 }
 
-footer a:link {
+.footer a:link {
     text-decoration: none;
     color: white;
 }
 
-footer a:visited {
+.footer a:visited {
     text-decoration: none;
     color: white;
 }
 
 
-footer li a:hover {
+.footer li a:hover {
     border-bottom: 2px solid #ccc;
     color: #ccc;
 }
@@ -632,21 +677,23 @@ footer li a:hover {
     text-align: center;
 }
 
-footer i {
+.footer i {
     color: white;
     font-size: 1.5rem;
     margin: 0 8px;
 }
 
-footer i:hover {
+.footer i:hover {
     color: #ccc;
 }
 
-footer p {
+.footer p {
     color: white;
     margin: 0;
     padding: 8px 8px;
 }
+
+/* Footer End */
 
 ::-webkit-scrollbar {
     width: 15px;
