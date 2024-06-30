@@ -48,7 +48,8 @@ label{
   
   /* The slider */
   .slider {
-    position: absolute;
+    position:absolute;
+    z-index: 10;
     cursor: pointer;
     top: 0;
     left: 0;
@@ -96,7 +97,6 @@ label{
   .slider.round:before {
     border-radius: 50%;
   }
-
 
 .circle {
     position: fixed;
@@ -498,7 +498,6 @@ h2{
 }
 
 .hero {
-    /* background-image: url(media/cutesy-wallpaper.png);  */
     background-color: #5e548e;
     background-size: cover;
     height: 85vh;
@@ -591,8 +590,8 @@ h2{
     display: grid;
     grid-template-areas:
       "devil devil waffle"
-      "devil devil code"
-      "illustrations uiux code";
+      "devil devil bear"
+      "illustrations uiux bear";
     grid-gap: 16px;
     width: 100%;
     max-width: 90%;
@@ -607,8 +606,8 @@ h2{
     grid-area: waffle;
   }
   
-  #code{
-    grid-area: code;
+  #bear{
+    grid-area: bear;
   }
   
   #illustrations{
@@ -1032,7 +1031,7 @@ i.uil.uil-external-link-alt {
     padding: 15px;    
 }
 
-.page-nav p{
+/* .page-nav p{
     padding-left: 20%;
 }
 
@@ -1042,7 +1041,7 @@ i.uil.uil-external-link-alt {
 
 .page-nav a:hover{
     color: #5e548e;
-}
+} */
 
 /* Footer Start*/
 
@@ -1129,7 +1128,7 @@ i.uil.uil-external-link-alt {
       max-width: 100%;
       grid-template-areas: 
         "devil devil"
-        "waffle code"
+        "waffle waffle"
         "illustrations uiux";
     }
   }
@@ -1169,7 +1168,6 @@ i.uil.uil-external-link-alt {
       grid-template-areas: 
         "devil"
         "waffle"
-        "code"
         "illustrations"
         "ux";
     margin: 50px 30px 20px 30px;
