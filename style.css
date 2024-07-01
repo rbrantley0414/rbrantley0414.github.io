@@ -1129,6 +1129,7 @@ i.uil.uil-external-link-alt {
       grid-template-areas: 
         "devil devil"
         "waffle waffle"
+        "bear bear"
         "illustrations uiux";
     }
   }
@@ -1168,6 +1169,7 @@ i.uil.uil-external-link-alt {
       grid-template-areas: 
         "devil"
         "waffle"
+        "bear"
         "illustrations"
         "ux";
     margin: 50px 30px 20px 30px;
@@ -1215,8 +1217,8 @@ i.uil.uil-external-link-alt {
 
     /* Nav */
     .logo {
-        height: 15px;
-        width:15px;
+        height: 30px;
+        width: 30px;
     }
 
     .circle {
