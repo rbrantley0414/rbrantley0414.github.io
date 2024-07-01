@@ -896,126 +896,6 @@ li.certs {
     width: 1000px;
 }
 
-/* Projects Gallery */
-
-.project-gallery {
-    background-color: #eeeeee;
-    display: flex;
-    align-items: center;
-    padding: 50px;
-    height: 100%;
-    border-radius: 15px;
-}
-
-.project-gallery ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.project-gallery ul li:hover {
-    cursor: pointer;
-    opacity: 0.7;
-}
-
-.project-gallery ul li img {
-    width: 250px;
-}
-
-.grid {
-    display: grid;
-    grid-template-areas:
-        "piggy creative rockpaperscissors"
-        "magic8ball aerialarts aerialarts";
-    grid-gap: 16px;
-    width: 50%;
-    height: auto;
-}
-
-#piggy {
-    grid-area: piggy;
-}
-
-#creative {
-    grid-area: creative;
-}
-
-#rockpaperscissors {
-    grid-area: rockpaperscissors;
-}
-
-#magic8ball {
-    grid-area: magic8ball;
-}
-
-#aerialarts {
-    grid-area: aerialarts;
-}
-
-.grid img {
-    border-radius: 10px;
-}
-
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.6);
-    transition: all 0.25s ease
-}
-
-.popup-box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    max-width: 500px;
-    width: 100%;
-    justify-content: center;
-    transform: translate(-50%, -50%);
-    border-radius: 15px;
-    transition: all 0.25s ease
-}
-
-.modal-header {
-    box-sizing: border-box;
-    height: 50px;
-    padding: 2em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    border-radius: 15px 15px 0 0;
-}
-
-.closeBtn {
-    font-size: 28px;
-    cursor: pointer;
-}
-
-i.uil.uil-external-link-alt {
-    color: white;
-}
-
-.modal-content {
-    max-width: 500px;
-}
-
-.caption {
-    box-sizing: border-box;
-    height: 50px;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    margin: 0;
-    border-radius: 0 0 15px 15px;
-    text-align: center;
-    padding: 1em;
-}
-
 .center{
     text-align: center;
 }
@@ -1030,18 +910,6 @@ i.uil.uil-external-link-alt {
     width: 475px;
     padding: 15px;    
 }
-
-/* .page-nav p{
-    padding-left: 20%;
-}
-
-.page-nav a{
-    color: #9f86c0;
-}
-
-.page-nav a:hover{
-    color: #5e548e;
-} */
 
 /* Footer Start*/
 
@@ -1238,6 +1106,11 @@ i.uil.uil-external-link-alt {
 
     .switch {
         display: none;
+    }
+
+    .blinking-cursor {
+        font-weight: 100;
+        font-size: 40px;
     }
 
     /* About Me */
