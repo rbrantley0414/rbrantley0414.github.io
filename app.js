@@ -50,14 +50,17 @@ var modalEle = document.querySelector(".modal");
 var modalCaption = document.querySelector(".caption");
 var modalImage = document.querySelector(".modalImage");
 var galleryImages = document.querySelectorAll(".ImgThumbnail");
+// var externalLink = document.getAttribute("data-modalsrc");
+var modalLink = document.querySelector(".ex-link");
 
 
 Array.from(document.querySelectorAll(".ImgThumbnail")).forEach(item => {
    item.addEventListener("click", event => {
       modalEle.style.display = "block";
       modalImage.src = event.target.src;
-      console.log(event.target.slideIndex);
       modalCaption.innerHTML = event.target.alt;
+      // console.log(event.target.getAttribute("data-modalsrc"));
+      modalLink.setAttribute("href", event.target.getAttribute("data-modalsrc"));
    });
 
 });
