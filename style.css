@@ -1045,7 +1045,7 @@ li.certs {
         "waffle"
         "bear"
         "illustrations"
-        "ux";
+        "uiux";
     margin: 50px 30px 20px 30px;
     }
     .project .overlay{
@@ -1090,6 +1090,12 @@ li.certs {
 @media only screen and (max-width: 425px) {
 
     /* Nav */
+
+    #logo{
+        position: relative;
+        z-index: 99;
+    }
+
     .logo {
         height: 50px;
         width: 50px;
